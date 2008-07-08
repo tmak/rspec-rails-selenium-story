@@ -1,1 +1,1 @@
-# Placeholder to satisfy Rails.
+# Include hook code here
