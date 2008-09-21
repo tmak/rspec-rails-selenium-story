@@ -1,7 +1,7 @@
 require 'rake'
 require 'rake/rdoctask'
 
-desc 'Generate documentation for the rails_selenium_story plugin.'
+desc 'Generate documentation for the rspec-rails-selenium-story plugin.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'RailsSeleniumStory'
