@@ -1,0 +1,26 @@
+= rspec-rails-selenium-story
+
+== Instructions
+
+Rails plugin that tries to make driving Selenium from the RSpec Story Runner easier.
+
+
+=== Features
+
+
+== Installation
+
+  ruby script/plugin install git@github.com:tmak/rspec-rails-selenium-story.git
+
+
+== Usage
+
+
+== Credits
+
+The start point of this plugin was the source code of a blog post from Kerry Buckley:
+
+http://kerry.ontoa.st/2007/11/07/driving-selenium-from-the-rspec-story-runner-rbehave
+
+
+Copyright (c) 2008 Thomas Marek, released under the MIT license
