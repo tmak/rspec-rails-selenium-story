@@ -4,8 +4,14 @@
 
 Rails plugin that tries to make driving Selenium from the RSpec Story Runner easier.
 
-
 === Features
+
+* Resets the database after every story scenario.
+* Restarts the application after every story scenario.
+* Resets the browser cookies (auth_token and the rails session) after every story scenario.
+* Makes a screenshot of a failing story scenario.
+* Adds the facility to check if a application exception was raised.
+* Adds the facility to run the selenium stories in background. (Uses Xvfb)
 
 
 == Getting Started
@@ -29,8 +35,37 @@ Add this to your "config/database.yml" file:
     encoding: utf8
     timeout: 5000
 
-=== 4. Run the selenium stories
+=== 4. Study the login example story
 
+  The rspec_selenium_story generator creates an example login story.
+  See "stories/selenium/steps/login_example_steps.rb" and "stories/selenium/stories/login_example_story.rb".
+
+=== 5. Run the selenium stories
+
+  ruby stories/selenium/all.rb
+
+
+== Other Useful Information
+
+=== Screenshots of failing story scenarios
+
+The screenshots get saved under "RAILS_ROOT/tmp/selenium/TIMESTAMP/screenshots".
+
+=== Checking for a rails application exception
+
+Just call
+
+  selenium.check_for_exception
+
+in a story step.
+
+=== Running the selenium stories in background
+
+Install Xvfb and set the environment variable SELENIUM_BACKGROUND to 1.
+
+Example:
+
+  export SELENIUM_BACKGROUND=1
   ruby stories/selenium/all.rb
 
 
