@@ -145,7 +145,12 @@ protected
     end
 
     unless File.exist?(@temp_test_db_path)
-     `rake db:reset RAILS_ENV=selenium`
+      if File.exist?("#{RAILS_ROOT}/db/schema.rb")
+        `rake db:reset RAILS_ENV=selenium`
+      else
+        `rake db:migrate:reset RAILS_ENV=selenium`
+      end
+
       FileUtils.copy @test_db_path, @temp_test_db_path
     else
       FileUtils.copy @temp_test_db_path, @test_db_path
