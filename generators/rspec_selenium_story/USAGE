@@ -1,0 +1,6 @@
+Description:
+    Bootstraps a Rails project for driving Selenium from the RSpec Story Runner:
+
+      - Creates a selenium environment
+      - Creates a directory structure under RAILS_ROOT/stories/selenium
+      - Creates an example story
