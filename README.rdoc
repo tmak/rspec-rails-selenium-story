@@ -37,8 +37,8 @@ Add this to your "config/database.yml" file:
 
 === 4. Study the login example story
 
-  The rspec_selenium_story generator creates an example login story.
-  See "stories/selenium/steps/login_example_steps.rb" and "stories/selenium/stories/login_example_story.rb".
+The rspec_selenium_story generator creates an example login story.
+See "stories/selenium/steps/login_example_steps.rb" and "stories/selenium/stories/login_example_story.rb".
 
 === 5. Run the selenium stories
 
