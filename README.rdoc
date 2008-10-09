@@ -8,12 +8,30 @@ Rails plugin that tries to make driving Selenium from the RSpec Story Runner eas
 === Features
 
 
-== Installation
+== Getting Started
+
+=== 1. Install rspec and rspec-rails
+
+See http://github.com/dchelimsky/rspec-rails/wikis
+
+=== 2. Install the plugin
 
   ruby script/plugin install git@github.com:tmak/rspec-rails-selenium-story.git
+  ruby script/generate rspec_selenium_story
 
+=== 3. Configure the selenium database
 
-== Usage
+Add this to your "config/database.yml" file:
+
+  selenium:
+    adapter: sqlite3
+    database: db/selenium.sqlite3
+    encoding: utf8
+    timeout: 5000
+
+=== 4. Run the selenium stories
+
+  ruby stories/selenium/all.rb
 
 
 == Credits
@@ -23,4 +41,6 @@ The start point of this plugin was the source code of a blog post from Kerry Buc
 http://kerry.ontoa.st/2007/11/07/driving-selenium-from-the-rspec-story-runner-rbehave
 
 
+
+------
 Copyright (c) 2008 Thomas Marek, released under the MIT license
